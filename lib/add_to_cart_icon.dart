@@ -72,10 +72,11 @@ class CartIconKey extends State<AddToCartIcon>
                     child: Text(
                       _qtdeBadge,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: widget.badgeOptions.fontSize,
-                        color: widget.badgeOptions.foregroundColor,
-                      ),
+                      style: widget.badgeOptions.style ??
+                          TextStyle(
+                            fontSize: widget.badgeOptions.fontSize,
+                            color: widget.badgeOptions.foregroundColor,
+                          ),
                     ),
                   ))
               : const SizedBox(

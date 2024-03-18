@@ -7,6 +7,7 @@ class BadgeOptions {
   final Color? foregroundColor;
   final double width;
   final double height;
+  final TextStyle? style;
 
   const BadgeOptions({
     this.active = true,
@@ -15,5 +16,6 @@ class BadgeOptions {
     this.foregroundColor,
     this.width = 18,
     this.height = 18,
+    this.style,
   });
 }
