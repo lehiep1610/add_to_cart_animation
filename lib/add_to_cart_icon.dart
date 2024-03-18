@@ -69,14 +69,16 @@ class CartIconKey extends State<AddToCartIcon>
                           Theme.of(context).colorScheme.secondary,
                     ),
                     constraints: BoxConstraints(minWidth: 16, minHeight: 16),
-                    child: Text(
-                      _qtdeBadge,
-                      textAlign: TextAlign.center,
-                      style: widget.badgeOptions.style ??
-                          TextStyle(
-                            fontSize: widget.badgeOptions.fontSize,
-                            color: widget.badgeOptions.foregroundColor,
-                          ),
+                    child: Center(
+                      child: Text(
+                        _qtdeBadge,
+                        textAlign: TextAlign.center,
+                        style: widget.badgeOptions.style ??
+                            TextStyle(
+                              fontSize: widget.badgeOptions.fontSize,
+                              color: widget.badgeOptions.foregroundColor,
+                            ),
+                      ),
                     ),
                   ))
               : const SizedBox(
