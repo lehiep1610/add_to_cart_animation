@@ -164,9 +164,11 @@ class _AddToCartAnimationState extends State<AddToCartAnimation> {
 
     await Future.delayed(Duration(milliseconds: 75));
 
-    animationModel.curve = widget.jumpAnimation.curve;
-    animationModel.duration =
-        widget.jumpAnimation.duration; // This is for preview mode
+    if (widget.jumpAnimation.active) {
+      animationModel.curve = widget.jumpAnimation.curve;
+      animationModel.duration = widget.jumpAnimation.duration;
+    }
+    // This is for preview mode
     animationModel.animationActive = true; // That's start the animation.
     setState(() {});
 

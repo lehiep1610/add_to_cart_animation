@@ -57,8 +57,8 @@ class CartIconKey extends State<AddToCartIcon>
           ),
           widget.badgeOptions.active
               ? Positioned(
-                  left: 30,
-                  top: 5,
+                  right: 0,
+                  top: 0,
                   child: Container(
                     padding: EdgeInsets.all(2.0),
                     width: widget.badgeOptions.width,
@@ -89,8 +89,8 @@ class CartIconKey extends State<AddToCartIcon>
 
   // Improvement/Suggestion 4.2: Change method-name + incorporating badge-quantity as optional-parameter
   Future<void> runCartAnimation([String? badgeQuantity]) async {
-    await _controller.forward();
-    await _controller.reverse();
+    // await _controller.fling();
+    // await _controller.reverse();
     _changeQtdeBadgeState(badgeQuantity);
     return;
   }

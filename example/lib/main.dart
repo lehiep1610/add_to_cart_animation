@@ -47,7 +47,9 @@ class MyHomePageState extends State<MyHomePage> {
       dragAnimation: const DragToCartAnimationOptions(
         rotation: true,
       ),
-      jumpAnimation: const JumpAnimationOptions(),
+      jumpAnimation: const JumpAnimationOptions(
+        active: false,
+      ),
       createAddToCartAnimation: (runAddToCartAnimation) {
         // You can run the animation by addToCartAnimationMethod, just pass trough the the global key of  the image as parameter
         this.runAddToCartAnimation = runAddToCartAnimation;
